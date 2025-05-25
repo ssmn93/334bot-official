@@ -1,0 +1,701 @@
+/* 変更済 */
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+/* @media (max-width: 1110px) {
+  
+} */
+
+@media (max-width: 650px) {
+  .menu-item {
+    display: none;
+  }
+  .menu-item-sp {
+    display: block;
+  }
+}
+
+@media (max-width: 703px) {
+  body {
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  
+  .start {
+    flex-direction: column; /* 縦並びに変更 */
+/*     font-size: clamp(1.5rem, 4vw, 3rem);
+    width: calc(100vw - 20px); */
+    display: flex;
+    padding-left: 0px;
+    margin-left: 0px;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .start img {
+    width: 100% !important; /* 画像を画面幅に合わせて調整 */
+    margin-bottom: 10px; /* 画像とテキスト間のスペース */
+    margin-left: 0px;
+  }
+
+  .start h1 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  
+  .start p .start_r p {
+    text-align: center;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .start2 p .start3 p .start2_r p {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .start2 h1 .start3 h1 .start2_r h1 {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+/*   .start2 .start3 {
+    flex: 1;
+  } */
+
+  .main {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .main2 {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .button-2 img {
+    display: none;
+  }
+
+  .start-h1 {
+    text-align: center !important;
+  }
+  
+        .start_r {
+        flex-direction: column; /* 縦並びに変更 */
+        align-items: center; /* 中央揃え */
+        text-align: center; /* テキストを中央揃え */
+      }
+
+      .start_r img {
+        width: 100% !important; /* 画像を画面幅に合わせて調整 */
+        order: -1; /* 画像を最上部に移動 */
+        margin-bottom: 10px; /* 画像下に余白を追加 */
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      .start2_r {
+        width: 100%; /* テキスト部分を全幅に */
+      }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column !important; /* 狭い画面では縦並びに変更 */
+    align-items: center;
+  }
+
+  .column {
+    width: 100%; /* カラムの幅を100%に設定 */
+    padding: 10px; /* パディングを調整して余白を縮小 */
+    margin-bottom: 5px;
+  }
+
+  .start {
+    padding-left: 0px !important;
+    padding-right: 20px !important;
+/*     padding: 0px;
+    margin: 0px; */
+  }
+}
+
+@media (min-width: 651px) {
+  .menu-item-sp {
+    display: none;
+  }
+}
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.title-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.menu-group {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  margin-left: 7.5px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+}
+
+.menu-item-sp img {
+  height: 35px;
+  padding: 5px;
+}
+
+.support-link {
+  margin-left: 20px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 300px; /* お好みの高さに調整 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/icon.png?v=1730011051492"); /* 指定画像を挿入 */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* 透明度を調整（0.0～1.0） */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* 背景画像よりも前面に表示 */
+  font-family: "arial", sans-serif;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.content h1 {
+  font-size: 48px; /* 文字の大きさを設定 */
+  color: #0d1b2a; /* 文字の色を設定 */
+  font-weight: bold; /* 太字に設定（必要に応じて） */
+  margin: 0; /* 不要な余白を削除 */
+}
+
+.content p {
+  font-size: 16px; /* 文字の大きさを設定 */
+  color: #1b263b; /* 文字の色を設定 */
+  font-weight: bold; /* 太字に設定（必要に応じて） */
+  margin: 0; /* 不要な余白を削除 */
+}
+
+.content img {
+  padding-left: 10px;
+  height: 50px;
+  width: auto; /* 縦横比を維持 */
+}
+
+.content button {
+  background-color: #5dade2; /* ボタンの背景色 */
+  color: #ffffff; /* 文字色 */
+  padding: 10px 20px; /* 余白 */
+  border: none; /* ボーダーを消す */
+  border-radius: 4px; /* 角丸 */
+  font-size: 16px; /* 文字サイズ */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* シャドウ */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* アニメーション */
+  font-weight: bold;
+}
+
+.introduce button {
+  background-color: #5dade2; /* ボタンの背景色 */
+  color: #ffffff; /* 文字色 */
+  padding: 10px 30px; /* 余白 */
+  border: none; /* ボーダーを消す */
+  border-radius: 4px; /* 角丸 */
+  font-size: 16px; /* 文字サイズ */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* シャドウ */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* アニメーション */
+  font-weight: bold;
+}
+
+.column a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.content button:hover {
+  background-color: #357abd; /* ホバー時の色 */
+  transform: translateY(-2px); /* ホバー時に少し浮かせる */
+}
+
+.content button:active {
+  background-color: #2e6fa4; /* クリック時の色 */
+  transform: translateY(0px); /* クリック時に戻す */
+}
+
+/* .termsofservice {
+  padding: 100px;
+} */
+
+.welcome {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.start {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  /*   overflow: hidden; */
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+
+.start img {
+  /*   overflow: hidden; */
+  width: 40%;
+  margin-left: 20px;
+  flex: 2;
+  box-shadow: 3px 3px 3px #333333;
+  /*   object-fit: cover;     */
+  /*   max-width: 200px; 最大幅を設定 */
+  /*   height: auto; */
+  object-fit: cover;
+  object-position: left;
+  /*   flex-shrink: 1; */
+}
+
+.start h1 {
+  padding-left: 30px;
+  color: #3f7aa1;
+  font-weight: 400;
+  display: flex;
+  margin: 0;
+  font-size: 3rem;
+  justify-content: left;
+}
+
+.start p {
+  padding-top: 10px;
+  margin: 0; /* 不要な余白を削除 */
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+/*   text-align: left; */
+  padding-left: 30px;
+}
+
+.start2 {
+  /*   flex-direction: column; */
+  flex: 3;
+  justify-content: left !important;
+}
+
+ 
+
+
+.howtocontent p {
+  padding-top: 10px;
+  margin: 0; /* 不要な余白を削除 */
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+/*   text-align: left; */
+  padding-left: 30px;
+}
+
+.welcome h1 {
+  color: #3f7aa1;
+  font-weight: 400;
+  display: flex;
+  margin: 0;
+  font-size: 3rem;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* デフォルト設定（大画面用） */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* 各カラムのスタイル */
+.column {
+  flex: 1;
+  background-color: #ededed;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+/* 画像のスタイル */
+.column img {
+  width: 100%; /* 画像の幅を親要素に合わせる */
+  height: auto;
+}
+
+.column p {
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.column:hover {
+  background-color: #e8e8e8; /* ホバー時の色 */
+  transform: translateY(-2px); /* ホバー時に少し浮かせる */
+}
+
+.column:active {
+  background-color: #e8e8e8; /* クリック時の色 */
+  transform: translateY(0px); /* クリック時に戻す */
+}
+
+.columnp {
+  text-align: center;
+  justify-content: center;
+  align-items: center !important;
+  text-decoration: none;
+}
+
+.main {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.main2 {
+  padding-top: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.introduce {
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.introduce h1 {
+  color: #3f7aa1;
+  font-weight: 400;
+  display: flex;
+  margin: 0;
+  font-size: 3rem;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.introduce p {
+  padding-top: 10px;
+  margin: 0; /* 不要な余白を削除 */
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  text-align: center !important;
+}
+
+.introduce button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.introduce button:hover {
+  background-color: #357abd; /* ホバー時の色 */
+  transform: translateY(-2px); /* ホバー時に少し浮かせる */
+}
+
+.introduce button:active {
+  background-color: #2e6fa4; /* クリック時の色 */
+  transform: translateY(0px); /* クリック時に戻す */
+}
+
+.intro-button {
+  width: 20px;
+}
+
+.footer {
+  padding: 2rem;
+  margin-top: 40px;
+  font-size: 15px;
+  color: #999999;
+  background: #ffffff;
+  background-color: #ededed;
+  text-align: left !important;
+}
+
+.footer__navi {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer__navi li {
+  display: inline-block;
+}
+
+.footer__navi li:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__logo {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.footer__logo img {
+  margin-right: 10px;
+}
+
+.space {
+  padding-top: 30px;
+}
+
+.honpen h1 {
+  color: #3f7aa1;
+  font-weight: 400;
+  display: flex;
+  margin: 0;
+  font-size: 3rem;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.invite {
+  margin-top: 5px;
+}
+
+.support {
+  margin-top: 5px;
+}
+
+.howto {
+  margin-top: 5px;
+}
+
+.form1 {
+  /*     position: relative; */
+  /*     display: inline-block; */
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectLink {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: relative;
+  /*     display: inline-block; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  /*     position: absolute; */
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content div:hover {
+  background-color: #dddddd;
+}
+
+.dropdown-content img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-label {
+  border-bottom: 1px dotted #333333;
+}
+
+.start-h1 {
+  justify-content: left;
+  padding-top: 50px !important;
+}
+
+.contentc {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.start_howto {
+  text-align: center;
+}
+
+.start2-h1 {
+  justify-content: left !important;
+}
+
+.command_gen {
+  padding-left: 30px;
+  display: flex;
+/*   white-space: nowrap; */
+}
+
+.command_gen select {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.command_gen input {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* stylelint-disable */
+
+.command_gen button {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.command_gen p {
+  padding-left: 0px !important;
+}
+
+.command h1 {
+  border-left: 10px solid #3f7aa1;
+}
+
+.welcomeh1 {
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
