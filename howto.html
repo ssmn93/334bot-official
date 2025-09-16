@@ -73,10 +73,6 @@
           <img src="https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/ab01ad8d-57fd-47e9-b798-1d19d757e1ee.image.png?v=1731579224768" alt="Ping">
           動作確認 /ping
         </div>
-        <div onclick="window.location.href='https://ssmn93.github.io/334bot-official/howto.html#:~:text=%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82-,/help,-bot%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88'">
-          <img src="https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/77b59a1d-d91d-4d66-b978-85627fac96d3.image.png?v=1731579298564" alt="Help">
-          ヘルプ /help
-        </div>
         <div onclick="window.location.href='https://ssmn93.github.io/334bot-official/howto.html#:~:text=%E7%A2%BA%E8%AA%8D%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%80%82-,/810,-%22%E6%B7%AB%E5%A4%A2%E8%AA%9E%E9%8C%B2'">
           <img src="https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/758ede96-ca63-449b-a948-df2a51385f4d.image.png?v=1731579448685" alt="810">
           淫夢語録と810の定理 /810
@@ -176,6 +172,10 @@
         <div onclick="window.location.href='https://ssmn93.github.io/334bot-official/howto.html#:~:text=%E3%82%B3%E3%83%94%E3%83%BC-,/channel,-%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E7%B3%BB%E6%A9%9F%E8%83%BD'">
           <img src="https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/bbdee041-cc90-4ac1-a02c-ce2593b23584.image.png?v=1731463713753" alt="Channel">
           チャンネル系機能の設定(334signalなど) /channel
+        </div>
+        <div onclick="window.location.href='https://ssmn93.github.io/334bot-official/howto.html#:~:text=%E3%82%B3%E3%83%94%E3%83%BC-,/channel,-%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E7%B3%BB%E6%A9%9F%E8%83%BD'">
+          <img src="https://cdn.glitch.global/db27db86-791c-40f5-9ee5-9cd4045e87ea/bbdee041-cc90-4ac1-a02c-ce2593b23584.image.png?v=1731463713753" alt="Channel">
+          チケット機能 /ticket
         </div>
         <div onclick="window.location.href='https://ssmn93.github.io/334bot-official/howto.html#:~:text=%E3%82%B3%E3%83%94%E3%83%BC-,%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB%E7%B3%BB%E6%A9%9F%E8%83%BD,-%E2%80%BB1%E3%81%AE%E3%81%A4%E3%81%8F'">
           その他(チャンネル系機能) other
@@ -1002,6 +1002,42 @@
 
           // フォーマットされた文章を生成
           const formattedText = `/channel mode:${mode} choice:${choice}`;
+
+          // クリップボードにコピー
+          navigator.clipboard.writeText(formattedText).then(() => {
+            alert("コマンドをコピーしました " + "\n" + formattedText);
+          }).catch(err => {
+            console.error("コピーに失敗しました", err);
+          });
+        });
+      </script>
+    </div>
+    <div class="command">
+      <div class="start">
+        <div class="start2">
+          <h1 class="start2-h1">/ticket</h1>
+          <p>チケット機能</p>
+          <div class="command_gen">
+            <span>
+            <p>/ticket title:</p>
+            <input name="ticketTitle" id="ticketTitle" placeholder="チケットのタイトルを入力">
+<!--             <br class="smp"> -->
+            </span>
+            <span>
+            <button id="ticketButton">コピー</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <script>  
+        document.getElementById("ticketButton").addEventListener("click", function () {
+          // selectとinputの値を取得
+          // if (!document.getElementById("content") || !document.getElementById("choice")) return;
+          
+          const content = document.getElementById("ticketTitle").value;
+
+          // フォーマットされた文章を生成
+          const formattedText = `/ticket title:${content}`;
 
           // クリップボードにコピー
           navigator.clipboard.writeText(formattedText).then(() => {
